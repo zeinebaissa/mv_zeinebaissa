@@ -128,6 +128,5 @@ class VinylMix
             ($this->getId() + 50) % 1000, // number between 0 and 1000, based on the id
             $width
         );
-
     }
 }
