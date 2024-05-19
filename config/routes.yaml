@@ -3,3 +3,27 @@ controllers:
         path: ../src/Controller/
         namespace: App\Controller
     type: attribute
+    
+# config/routes.yaml
+send_email:
+    path: /send-email
+    controller: App\Controller\EmailController::sendEmail
+
+contact_form:
+    path: '/contact'
+    controller: 'App\Controller\ContactController::showForm'
+    methods: ['GET']
+
+contact_form_submit:
+    path: /contact
+    controller: App\Controller\ContactController::submitForm
+    methods: [POST]
+
+contact_form_show:
+    path: /contact
+    controller: App\Controller\ContactController::showForm
+    methods: [GET]
+
+confirmation:
+    path: /confirmation
+    controller: App\Controller\ConfirmationController::showConfirmation
